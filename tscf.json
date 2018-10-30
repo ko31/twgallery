@@ -1,0 +1,28 @@
+[
+    {
+        "name": "work",
+        "label": "作品",
+        "type": "post",
+        "post_types": [
+            "work"
+        ],
+        "context": "normal",
+        "priority": "default",
+        "description": "",
+        "fields": [
+            {
+                "name": "tweet",
+                "label": "ツイート",
+                "col": 1,
+                "clear": false,
+                "required": true,
+                "default": "",
+                "placeholder": "",
+                "description": "",
+                "max": "",
+                "min": "",
+                "type": "text"
+            }
+        ]
+    }
+]
