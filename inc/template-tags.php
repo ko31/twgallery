@@ -92,6 +92,7 @@ function twgallery_players_list( $atts ) {
 			'show_count' => 1,
 			'taxonomy'   => 'player',
 			'orderby'    => 'count',
+			'order'      => 'DESC',
 		];
 		wp_list_categories( $args );
 		?>
@@ -115,6 +116,7 @@ function twgallery_artists_list( $atts ) {
 			'show_count' => 1,
 			'taxonomy'   => 'artist',
 			'orderby'    => 'count',
+			'order'      => 'DESC',
 		];
 		//wp_list_categories( $args );
 		foreach ( get_categories( $args ) as $cat ):
