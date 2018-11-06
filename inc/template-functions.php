@@ -5,10 +5,12 @@
  * @package twgallery
  */
 
-function twgallery_document_title_separator( $sep ){
+function twgallery_document_title_separator( $sep ) {
 	$sep = ' | ';
+
 	return $sep;
 }
+
 add_filter( 'document_title_separator', 'twgallery_document_title_separator' );
 
 function twgallery_pre_get_posts( $query ) {
@@ -34,3 +36,12 @@ function twgallery_get_the_archive_title( $title ) {
 }
 
 add_filter( 'get_the_archive_title', 'twgallery_get_the_archive_title' );
+
+function twgallery_edit_form_advanced( $post ) {
+	if ( ! empty( tscfp( 'tweet' ) ) ) {
+		global $wp_embed;
+		echo $wp_embed->run_shortcode( "[embed]" . tscfp( 'tweet' ) . '[/embed]' );
+	}
+}
+
+add_action( 'edit_form_advanced', 'twgallery_edit_form_advanced' );
