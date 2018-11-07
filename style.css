@@ -36,3 +36,7 @@ body {
 	margin-bottom: 1.5rem;
 	margin-top: 1.5rem;
 }
+
+form.form-inline.keyword-search {
+	margin-bottom: 1.0rem;
+}

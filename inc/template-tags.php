@@ -85,6 +85,12 @@ if ( ! function_exists( 'twgallery_get_nav_menu_items' ) ) {
  */
 function twgallery_players_list( $atts ) {
 	?>
+	<form class="form-inline keyword-search">
+		<div class="form-group">
+			<label for="keyword">名前で絞り込む</label>
+			<input type="text" id="keyword" class="form-control mx-sm-3">
+		</div>
+	</form>
 	<ul>
 		<?php
 		$args = [
@@ -109,6 +115,12 @@ add_shortcode( 'players_list', 'twgallery_players_list' );
  */
 function twgallery_artists_list( $atts ) {
 	?>
+	<form class="form-inline keyword-search">
+		<div class="form-group">
+			<label for="keyword">名前で絞り込む</label>
+			<input type="text" id="keyword" class="form-control mx-sm-3">
+		</div>
+	</form>
 	<ul>
 		<?php
 		$args = [
@@ -118,9 +130,8 @@ function twgallery_artists_list( $atts ) {
 			'orderby'    => 'count',
 			'order'      => 'DESC',
 		];
-		//wp_list_categories( $args );
 		foreach ( get_categories( $args ) as $cat ):
-			echo '<li>';
+			echo '<li class="cat-item">';
 			echo '<a href="' . get_category_link( $cat->term_id ) . '">@' . $cat->name . '</a>&nbsp;';
 			echo '(' . $cat->count . ')';
 			echo '</li>';

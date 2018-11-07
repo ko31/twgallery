@@ -4,7 +4,7 @@ get_header();
 	<!-- Page Content -->
 	<div class="container">
 
-		<h1 class="my-4 text-center text-lg-left"><?php the_archive_title(); ?> のイラスト一覧</h1>
+		<h1 class="my-4 text-center text-lg-left"><?php the_archive_title(); ?> の作品一覧</h1>
 
 		<?php
 		if ( have_posts() ):
